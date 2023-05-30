@@ -1,0 +1,11 @@
+stack=[]
+        while head!=None:
+            stack.append(head.val)
+            head=head.next
+        result=ListNode(0)
+        top=result
+        while stack:
+            n=ListNode(stack.pop())
+            top.next=n
+            top=n
+        return result.nex
