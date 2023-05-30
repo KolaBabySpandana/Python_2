@@ -1,0 +1,13 @@
+stack=[]
+        nodes=[]
+        c=0
+        ptr=head
+        while ptr!=None:
+            c=c+1
+            if c>=left and c<=right:
+                stack.append(ptr.val)
+                nodes.append(ptr)
+            ptr=ptr.next
+        for node in nodes:
+            node.val=stack.pop()
+        return head
